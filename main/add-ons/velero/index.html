@@ -542,8 +542,36 @@
   
   
     <li class="md-nav__item">
+      <a href="../csi-secrets-store-provider-aws/" class="md-nav__link">
+        secrets-store-csi-driver-provider-aws
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../external-dns/" class="md-nav__link">
         ExternalDNS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../external-secrets/" class="md-nav__link">
+        External Secrets Operator
       </a>
     </li>
   
@@ -670,6 +698,20 @@
     <li class="md-nav__item">
       <a href="../prometheus/" class="md-nav__link">
         Prometheus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../secrets-store-csi-driver/" class="md-nav__link">
+        secrets-store-csi-driver
       </a>
     </li>
   
@@ -1036,23 +1078,13 @@ velero_helm_config = {
   name        = &quot;velero&quot;
   description = &quot;A Helm chart for velero&quot;
   chart       = &quot;velero&quot;
-  version     = &quot;2.29.8&quot;
+  version     = &quot;2.30.0&quot;
   repository  = &quot;https://vmware-tanzu.github.io/helm-charts/&quot;
   namespace   = &quot;velero&quot;
   values = [templatefile(&quot;${path.module}/values.yaml&quot;, {
-    backup_s3_bucket = &quot;&lt;YOUR_BUCKET_NAME&gt;&quot;,
+    bucket = &quot;&lt;YOUR_BUCKET_NAME&gt;&quot;,
+    region = &quot;&lt;YOUR_BUCKET_REGION&gt;&quot;
   })]
-
-  set_values = [
-    {
-      name  = &quot;serviceAccount.server.name&quot;
-      value = local.name
-    },
-    {
-      name  = &quot;serviceAccount.server.create&quot;
-      value = false
-    }
-  ]
 }
 </code></pre></div>
 <p>To see a working example, see the <a href="https://github.com/aws-ia/terraform-aws-eks-blueprints/tree/main/examples/stateful"><code>stateful</code></a> example blueprint.</p>
