@@ -529,6 +529,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../add-ons/apache-airflow/" class="md-nav__link">
+        Apache Airflow add-on
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../add-ons/argocd/" class="md-nav__link">
         ArgoCD
       </a>
@@ -629,6 +643,20 @@
     <li class="md-nav__item">
       <a href="../add-ons/aws-privateca-issuer/" class="md-nav__link">
         aws-privateca-issuer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../add-ons/calico/" class="md-nav__link">
+        Calico
       </a>
     </li>
   
@@ -823,6 +851,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../add-ons/kuberay-operator/" class="md-nav__link">
+        KubeRay Operator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../add-ons/kubernetes-dashboard/" class="md-nav__link">
         Kubernetes Dashboard
       </a>
@@ -881,6 +923,20 @@
     <li class="md-nav__item">
       <a href="../add-ons/prometheus/" class="md-nav__link">
         Prometheus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../add-ons/promtail/" class="md-nav__link">
+        Promtail
       </a>
     </li>
   
@@ -1738,6 +1794,10 @@ The authenticator gets its configuration information from the <code>aws-auth</co
     ]
   }
 </code></pre></div>
+<p><em>NOTE</em>:</p>
+<ul>
+<li>You should not set to true both <code>create_launch_template</code> and <code>remote_access</code> or you'll end-up with new managed nodegroups that won't be able to join the cluster.</li>
+</ul>
 <h2 id="self-managed-node-groups">Self-managed Node Groups<a class="headerlink" href="#self-managed-node-groups" title="Permanent link">&para;</a></h2>
 <p>The below example demonstrates the minimum configuration required to deploy a Self-managed node group.</p>
 <div class="highlight"><pre><span></span><code>    # EKS SELF MANAGED NODE GROUPS
