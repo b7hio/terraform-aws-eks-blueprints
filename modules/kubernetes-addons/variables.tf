@@ -278,7 +278,7 @@ variable "crossplane_helm_provider" {
 }
 
 #-----------ONDAT ADDON-------------
-variable "enable_ondat" {
+/*variable "enable_ondat" {
   description = "Enable Ondat add-on"
   type        = bool
   default     = false
@@ -338,7 +338,7 @@ variable "ondat_admin_password" {
   type        = string
   default     = "storageos"
   sensitive   = true
-}
+}*/
 
 #-----------External DNS ADDON-------------
 variable "enable_external_dns" {
