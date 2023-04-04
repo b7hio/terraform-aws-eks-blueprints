@@ -359,6 +359,7 @@ module "kube_state_metrics" {
   addon_context     = local.addon_context
 }
 
+/*
 module "ondat" {
   source  = "ondat/ondat-addon/eksblueprints"
   version = "0.1.2"
@@ -377,6 +378,7 @@ module "ondat" {
   admin_username    = var.ondat_admin_username
   admin_password    = var.ondat_admin_password
 }
+*/
 
 module "kube_prometheus_stack" {
   count             = var.enable_kube_prometheus_stack ? 1 : 0
