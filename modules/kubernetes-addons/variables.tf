@@ -443,7 +443,7 @@ variable "kube_state_metrics_helm_config" {
 }
 
 #-----------SYSDIG-------------
-variable "enable_sysdig_agent" {
+/*variable "enable_sysdig_agent" {
   description = "Enable Sysdig Agent add-on"
   type        = bool
   default     = false
@@ -453,7 +453,7 @@ variable "sysdig_agent_helm_config" {
   description = "Sysdig Helm Chart config"
   type        = any
   default     = {}
-}
+}*/
 
 #-----------TETRATE ISTIO-------------
 variable "enable_tetrate_istio" {
